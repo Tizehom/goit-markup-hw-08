@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<!--Шапка-->
-		<!-- <header class="header">
+		<header class="header">
 			<div class="container header__container">
 				<a href="./index.html" class="logo header__logo"><span class="logo-color">Web</span>Studio</a>
 				<nav class="navigation header__navigation">
@@ -53,8 +53,12 @@
 						</a>
 					</li>
 				</ul>
+				<button type="button" class="menu-open">o</button>
+				<div class="mob-menu">
+					<button type="button" class="menu-close">x</button>
+				</div>
 			</div>
-		</header> -->
+		</header>
 		<!--Головний розділ-->
 		<main>
 			<section class="hero">
@@ -108,7 +112,7 @@
 				</div>				
 			</section>
 			<!--Напрямки нашої роботи-->
-			<!-- <section class="industry">
+			<section class="industry">
 				<div class="container industry__container">
 					<h2 class="industry__title title__center">Чим ми займаємося</h2>
 				<ul class="list industry__list">
@@ -138,14 +142,38 @@
 					</li>
 				</ul>
 				</div>
-			</section> -->
+			</section>
 			<!-- Команда -->
 			<section class="team">
 				<div class="container team__container">
 					<h2 class="team__title title__center">Наша команда</h2>
 				<ul class="list team__list">
 					<li class="team__person">
-						<img src="./images/ihor-dem.jpg" alt="Фото Ігоря Дем'яненко" width="270" height="260">
+						<picture>
+							<source srcset="
+							./images/ihor-dem.jpg 1x, 
+							./images/ihor-dem-2x.jpg 2x
+							"
+							media="(min-width: 1200px)"
+							>
+							<source srcset="
+							./images/ihor-dem-tab.jpg 1x, 
+							./images/ihor-dem-tab-2x.jpg 2x
+							"
+							media="(min-width: 768px)"
+							>
+							<source srcset="
+							./images/ihor-dem-mob.jpg 1x, 
+							./images/ihor-dem-mob-2x.jpg 2x
+							"
+							media="(max-width: 767px)"
+							>
+							<img 
+							src="./images/ihor-dem-mob.jpg" 
+							alt="Фото Ігоря Дем'яненко" 
+							width="450"
+							/>
+						</picture>						
 						<div class="team__card">
 							<h3 class="team__title--person">Ігор Дем'яненко</h3>
 							<p lang="en" class="team__speciality">Product Designer</p>

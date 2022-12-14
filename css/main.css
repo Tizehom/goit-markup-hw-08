@@ -2,6 +2,8 @@
   --text-color-secondary: #757575;
   --color-primary: #2196F3;
   --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --gra: linear-gradient(rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)) ;
 }
 
 h1,
@@ -129,6 +131,7 @@ h2 {
 
 .menu {
   display: flex;
+  display: none;
 }
 
 .menu .menu__item:not(:last-child),
@@ -168,6 +171,7 @@ h2 {
   margin-left: auto;
   padding-top: 32px;
   padding-bottom: 32px;
+  display: none;
 }
 
 .contacts__link {
@@ -185,12 +189,36 @@ h2 {
   fill: currentColor;
 }
 
+.menu-open {
+  margin-left: auto;
+}
+
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
   margin: 0 auto;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
+  background-image: var(--gra), url(../../images/hero-bg-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  block-size: cover;
+  flex-grow: 1;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gra), url(../../images/hero-bg-mob-2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 100%;
+    background-image: var(--gra), url(../../images/hero-img.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gra), url(../../images/hero-img-2x.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -200,7 +228,6 @@ h2 {
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img.jpg);
   }
 }
 
@@ -307,6 +334,11 @@ h2 {
   background: #FFFFFF;
   padding-top: 94px;
   padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .industry {
+    display: none;
+  }
 }
 
 .industry__list {

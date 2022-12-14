@@ -32,6 +32,7 @@
 
 .menu {
     display: flex;
+    display: none;
 }
 
 .menu .menu__item:not(:last-child),
@@ -72,6 +73,7 @@
     margin-left: auto;
     padding-top: 32px;
     padding-bottom: 32px;
+    display: none;
 }
 
 .contacts__link {
@@ -87,4 +89,8 @@
 .contacts__icon {
     margin-right: 10px;
     fill: currentColor;
+}
+
+.menu-open {
+    margin-left: auto;
 }
