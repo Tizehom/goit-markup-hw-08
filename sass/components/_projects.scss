@@ -1,22 +1,29 @@
-.project-list {
+.project {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    @media screen and (min-width: 768px) {
+        margin-top: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-top: 50px;
+    }   
 }
 
-.project-list a {
+.project a {
     text-decoration: none;
 }
 
-.project-item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-
-    &:nth-child(3n) {
-        margin-right: 0;
+.project__item {
+    width: 100%;
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
     }
-    &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-    }
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 60px) / 3);
+    }   
+    
     &:hover,
     &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -25,33 +32,34 @@
     }
 }
 
-.project-text {
+.project__text {
     padding: 20px 24px;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
+    
 }
 
-.project-title {
+.project__text--title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: #212121;
 }
 
-.category-project {
+.project__category {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--text-color-secondary);
 }
 
-.project-box {
+.project__box {
     position: relative;
     overflow: hidden;
 }
 
-.project-overlay {
+.project__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -63,13 +71,13 @@
     transform: translateY(100%);
     transition: transform var(--tra);
 
-    .project-item-link:hover &,
-    .project-item-link:focus & {
+    .project__link:hover &,
+    .project__link:focus & {
     transform: translateY(0);
     }
 }
 
-.project-overlay-text {
+.project__overlay--text {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
