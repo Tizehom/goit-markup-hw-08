@@ -8,7 +8,7 @@
             url(../../images/hero-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    block-size: cover;
+    background-size: cover;
     flex-grow: 1;
 
     @include retina {

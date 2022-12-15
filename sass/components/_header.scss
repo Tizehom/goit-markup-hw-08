@@ -4,15 +4,19 @@
 }
 
 .header__container {
+    max-width: 480px;
+    height: 60px;
     display: flex;
+    padding: 16px 15px;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 1px #ECECEC;
 }
 
 .logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #000000;
@@ -20,10 +24,10 @@
 }
 
 .header__logo {    
-    padding-top: 24px;
-    padding-right: 20px;
-    padding-bottom: 25px;
-    margin-right: 73px;
+    // padding-top: 24px;
+    // padding-right: 20px;
+    // padding-bottom: 25px;
+    // margin-right: 73px;
 }
 
 .logo-color {
